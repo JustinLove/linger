@@ -4,7 +4,7 @@
   "category": ["in-game", "ui"],
   "context": "client",
   "date": "2014/02/27",
-  "description": "Don't auto-exit after a game.",
+  "description": "Prevent the game from existing immediately, and provides a button to go to game over.",
   "display_name": "Linger Dev",
   "enabled": true,
   "forum": null,

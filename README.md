@@ -1,11 +1,6 @@
 # Linger
 
-Don't auto-exit after a game.
-
-## Features
-
-- Rainbows
-- Unicorns
+Prevent the game from existing immediately, and provides a button to go to game over.
 
 ## Development
 
