@@ -4,4 +4,4 @@ require.config({
     text: 'linger/text',
   }
 })
-require(['linger/main'])
+require(['linger/linger'])

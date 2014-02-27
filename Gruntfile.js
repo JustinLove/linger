@@ -18,7 +18,7 @@ module.exports = function(grunt) {
           stubModules: ['text'],
 
           //name: 'lib/ext/almond',
-          name: 'linger/main',
+          name: 'linger/linger',
           out: '../<%= target %>/ui/mods/linger/bootstrap.js',
 
           skipModuleInsertion: true,

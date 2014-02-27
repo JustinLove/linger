@@ -3,30 +3,32 @@ define([
 ], function(html) {
   "use strict";
 
-  var liveGameServerState = handlers.server_state
-  var gameOverUrl = '../game_over/game_over.html'
-
-  handlers.server_state = function(msg) {
-    if (msg.state == 'game_over') {
-      gameOverUrl = msg.url
-      msg.url = null
-    }
-    liveGameServerState(msg)
-  }
-
-  var viewModel = {
-    navToGameOver: function() {
-      model.gameOverReviewMode(false);
-      window.location.href = gameOverUrl
-    }
-  }
-
-  return {
-    ready: function() {
+  var linger = {
+    liveGameServerState: handlers.server_state,
+    gameOverUrl: '../game_over/game_over.html',
+    lingerServerState: function(msg) {
+      if (msg.state == 'game_over') {
+        linger.gameOverUrl = msg.url
+        linger.showButton()
+        msg.url = null
+      }
+      linger.liveGameServerState(msg)
+    },
+    viewModel: {
+      navToGameOver: function() {
+        model.gameOverReviewMode(false);
+        window.location.href = linger.gameOverUrl
+      }
+    },
+    showButton: function() {
       createFloatingFrame('linger_exit_button_frame', 200, 40, {'offset': 'leftCenter', 'left': 0});
       var $container = $('#linger_exit_button_frame_content')
       $(html).appendTo($container)
-      ko.applyBindings(viewModel, $container[0])
-    }
+      ko.applyBindings(linger.viewModel, $container[0])
+    },
   }
+
+  handlers.server_state = linger.lingerServerState
+
+  return linger
 })
