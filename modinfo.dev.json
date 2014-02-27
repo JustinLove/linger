@@ -1,0 +1,23 @@
+{
+  "author": "wondible",
+  "build": "61941",
+  "category": ["in-game", "ui"],
+  "context": "client",
+  "date": "2014/02/27",
+  "description": "Don't auto-exit after a game.",
+  "display_name": "Linger Dev",
+  "enabled": true,
+  "forum": null,
+  "id": "linger",
+  "identifier": "com.wondible.pa.linger",
+  "live_game": [
+    "coui://ui/mods/linger/require.js",
+    "coui://ui/mods/linger/linger.css",
+    "coui://ui/mods/linger/bootstrap.js"
+  ],
+  "priority": 100,
+  "requires": [],
+  "signature": "not yet implemented",
+  "version": "0.0.0"
+}
+
