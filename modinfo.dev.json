@@ -1,13 +1,13 @@
 {
   "author": "wondible",
-  "build": "61941",
+  "build": "62110",
   "category": ["in-game", "ui"],
   "context": "client",
-  "date": "2014/02/27",
-  "description": "Prevent the game from existing immediately, and provides a button to go to game over.",
+  "date": "2014/03/04",
+  "description": "Prevent the game from exiting immediately, and provides a button to go to game over.",
   "display_name": "Linger Dev",
   "enabled": true,
-  "forum": null,
+  "forum": "https://forums.uberent.com/threads/wip-linger.56944/",
   "id": "linger",
   "identifier": "com.wondible.pa.linger",
   "live_game": [
@@ -18,6 +18,6 @@
   "priority": 100,
   "requires": [ "rFloatFrame" ],
   "signature": "not yet implemented",
-  "version": "0.0.0"
+  "version": "1.0.1"
 }
 
