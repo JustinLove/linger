@@ -6,6 +6,7 @@ define([
   var linger = {
     liveGameServerState: handlers.server_state,
     gameOverUrl: '../game_over/game_over.html',
+    visible: false,
     lingerServerState: function(msg) {
       if (msg.state == 'game_over') {
         linger.gameOverUrl = msg.url
@@ -21,6 +22,9 @@ define([
       }
     },
     showButton: function() {
+      if (linger.visible) return
+
+      linger.visible = true
       createFloatingFrame('linger_exit_button_frame', 200, 40, {'offset': 'leftCenter', 'left': 0});
       var $container = $('#linger_exit_button_frame_content')
       $(html).appendTo($container)
