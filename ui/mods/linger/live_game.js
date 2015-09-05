@@ -27,6 +27,10 @@
   })
 
   // And having done all that we need a way to turn it back on
+  model.gameOver.subscribe(function(value) {
+    api.panels.options_bar && api.panels.options_bar.message('linger_game_over', value)
+  })
+
   model.lingerShowGameOver = function() {
     api.time.resume()
     model.gameOverState().show = true
