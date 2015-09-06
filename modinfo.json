@@ -1,0 +1,23 @@
+{
+  "author": "wondible",
+  "build": "86765",
+  "category": ["in-game", "ui"],
+  "context": "client",
+  "date": "2015/09/05",
+  "description": "Defer the game over screen, and allow the chronocam to be hidden.",
+  "display_name": "Linger",
+  "forum": "https://forums.uberent.com/threads/wip-linger.56944/",
+  "identifier": "com.wondible.pa.linger",
+  "scenes": {
+    "live_game": [
+      "coui://ui/mods/linger/live_game.js"
+    ],
+    "live_game_options_bar": [
+      "coui://ui/mods/linger/live_game_options_bar.js"
+    ]
+  },
+  "priority": 100,
+  "signature": "not yet implemented",
+  "version": "2.0.0"
+}
+
