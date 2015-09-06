@@ -20,11 +20,24 @@
                 });
         }
 
-  model.showTimeControls.G.change.forEach(function(subscription) {
-    if (timeShowGameOver.toString() == subscription.La.toString()) {
-      subscription.dispose()
-    }
-  })
+  // ubermap loads unminified knockout
+  var _subscriptions
+  var callback
+  if (model.showTimeControls['G']) {
+    _subscriptions = 'G'
+    callback = 'La'
+  } else if (model.showTimeControls['_subscriptions']) {
+    _subscriptions = '_subscriptions'
+    callback = 'callback'
+  }
+
+  if (model.showTimeControls[_subscriptions]) {
+    model.showTimeControls[_subscriptions].change.forEach(function(subscription) {
+      if (timeShowGameOver.toString() == subscription[callback].toString()) {
+        subscription.dispose()
+      }
+    })
+  }
 
   // And having done all that we need a way to turn it back on
   model.gameOver.subscribe(function(value) {

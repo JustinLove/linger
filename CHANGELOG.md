@@ -1,3 +1,8 @@
+## 2.0.1
+
+- Work around issue with unminified knockout loaded by UberMap
+- modinfo wasn't in the git repo
+
 ## 2.0.0
 
 Total rewrite; no longer using amdclean
